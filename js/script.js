@@ -50,3 +50,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+  // Navbar scroll hide/show functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    let lastScrollPosition = 0;
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+      // Get current scroll position
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Check if scrolling up
+      if (currentScrollPosition < lastScrollPosition) {
+        // Scrolling UP - show header
+        header.classList.remove('header--hidden');
+      } else if (currentScrollPosition > 100) {
+        // Scrolling DOWN and not at the top - hide header
+        header.classList.add('header--hidden');
+      }
+      
+      // Update last scroll position
+      lastScrollPosition = currentScrollPosition;
+    });
+  });
