@@ -32,21 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Dropdown functionality
-  const dropdownToggle = document.querySelector(".dropdown-toggle");
-  const dropdownContent = document.querySelector(".dropdown-content");
-
-  if (dropdownToggle && dropdownContent) {
-    dropdownToggle.addEventListener("click", () => {
-      dropdownContent.classList.toggle("active");
-      const expanded = dropdownToggle.getAttribute("aria-expanded") === "true" || false;
-      dropdownToggle.setAttribute("aria-expanded", !expanded);
-
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  
+  // Add click event listener to each toggle button
+  dropdownToggles.forEach(button => {
+    button.addEventListener('click', function() {
+      // Toggle the 'active' class on the adjacent dropdown content
+      const dropdownContent = this.nextElementSibling;
+      dropdownContent.classList.toggle('active');
+      
+      // Update the aria-expanded attribute for accessibility
+      const isExpanded = dropdownContent.classList.contains('active');
+      this.setAttribute('aria-expanded', isExpanded);
+      
       // Change button text based on state
-      if (!expanded) {
-        dropdownToggle.textContent = "Show less";
-      } else {
-        dropdownToggle.textContent = "Read more";
-      }
+      this.textContent = isExpanded ? 'Read less' : 'Read more';
     });
-  }
+  });
 });
