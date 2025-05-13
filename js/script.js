@@ -36,40 +36,79 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // Add click event listener to each toggle button
   dropdownToggles.forEach(button => {
-    button.addEventListener('click', function() {
-      // Toggle the 'active' class on the adjacent dropdown content
+    button.addEventListener('click', function(e) {
+      // Prevent the click from bubbling up to parent elements
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Get the direct parent element that contains this button
+      const parentGridItem = this.closest('.grid-item') || this.closest('.content-wrapper') || this.parentElement;
+      
+      // Get the specific dropdown-content that is a direct sibling of THIS button
       const dropdownContent = this.nextElementSibling;
-      dropdownContent.classList.toggle('active');
+      
+      if (!dropdownContent || !dropdownContent.classList.contains('dropdown-content')) return;
+      
+      // Toggle the 'active' class on THIS dropdown content only
+      const isExpanded = !dropdownContent.classList.contains('active');
+      
+      // Close all other dropdowns first
+      dropdownToggles.forEach(otherButton => {
+        if (otherButton !== this) {
+          const otherContent = otherButton.nextElementSibling;
+          if (otherContent && otherContent.classList.contains('dropdown-content') && otherContent.classList.contains('active')) {
+            otherContent.classList.remove('active');
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherButton.textContent = 'Read more';
+          }
+        }
+      });
+      
+      // Apply the change to the current dropdown
+      dropdownContent.classList.toggle('active', isExpanded);
       
       // Update the aria-expanded attribute for accessibility
-      const isExpanded = dropdownContent.classList.contains('active');
       this.setAttribute('aria-expanded', isExpanded);
       
       // Change button text based on state
       this.textContent = isExpanded ? 'Read less' : 'Read more';
     });
   });
-});
+
+  // Close dropdowns when clicking outside of them
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown-toggle') && !e.target.closest('.dropdown-content')) {
+      dropdownToggles.forEach(button => {
+        const parent = button.closest('.grid-item') || button.closest('.card') || button.parentElement;
+        const content = parent.querySelector('.dropdown-content') || button.nextElementSibling;
+        
+        if (content && content.classList.contains('active')) {
+          content.classList.remove('active');
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Read more';
+        }
+      });
+    }
+  });
 
   // Navbar scroll hide/show functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    let lastScrollPosition = 0;
-    const header = document.querySelector('.header');
+  let lastScrollPosition = 0;
+  const header = document.querySelector('.header');
+  
+  window.addEventListener('scroll', function() {
+    // Get current scroll position
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
     
-    window.addEventListener('scroll', function() {
-      // Get current scroll position
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-      
-      // Check if scrolling up
-      if (currentScrollPosition < lastScrollPosition) {
-        // Scrolling UP - show header
-        header.classList.remove('header--hidden');
-      } else if (currentScrollPosition > 100) {
-        // Scrolling DOWN and not at the top - hide header
-        header.classList.add('header--hidden');
-      }
-      
-      // Update last scroll position
-      lastScrollPosition = currentScrollPosition;
-    });
+    // Check if scrolling up
+    if (currentScrollPosition < lastScrollPosition) {
+      // Scrolling UP - show header
+      header.classList.remove('header--hidden');
+    } else if (currentScrollPosition > 100) {
+      // Scrolling DOWN and not at the top - hide header
+      header.classList.add('header--hidden');
+    }
+    
+    // Update last scroll position
+    lastScrollPosition = currentScrollPosition;
   });
+});

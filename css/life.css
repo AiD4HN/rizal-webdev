@@ -1,0 +1,312 @@
+/* Life page specific styles */
+
+.life-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/rizal-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section titles */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #c8102e;
+}
+
+/* Timeline section */
+.timeline-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  height: 100%;
+  width: 4px;
+  background: #c8102e;
+  z-index: 1;
+}
+
+.timeline-item {
+  padding-left: 100px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #c8102e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 0 0 4px white;
+}
+
+.timeline-content {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #c8102e;
+  font-size: 1.4rem;
+}
+
+.timeline-image {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Quote section */
+.quote-section {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  margin-bottom: 60px;
+  border-radius: 8px;
+}
+
+blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 5rem;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  color: #c8102e;
+  opacity: 0.3;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Achievements section */
+.achievements-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-icon {
+  color: #c8102e;
+  margin-bottom: 20px;
+}
+
+.achievement-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Personal life section */
+.personal-life-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.personal-life-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.personal-life-text h3 {
+  color: #c8102e;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.personal-life-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.personal-life-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* CTA section */
+.legacy-cta-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0a3161;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.legacy-cta-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.legacy-cta-section p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #c8102e;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a00d25;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    padding-left: 70px;
+  }
+  
+  .timeline-marker {
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .personal-life-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .personal-life-image {
+    order: -1;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  blockquote {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}

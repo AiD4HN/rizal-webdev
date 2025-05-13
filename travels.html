@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Life of Jose Rizal</title>
+    <title>Rizal's Travels</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/travels.css" />
   </head>
 
   <body>
@@ -16,7 +17,7 @@
           
           <nav class="desktop-nav">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="life.html" class="nav-link ">Life</a>
+            <a href="life.html" class="nav-link">Life</a>
             <a href="travels.html" class="nav-link active">Travels</a>
             <a href="index.html#legacy" class="nav-link">Legacy</a>
             <a href="about.html" class="nav-link">About Us</a>
@@ -35,8 +36,245 @@
       </header>
       
       <!-- Main Content Section -->
-      <main class="main-content">
-        <!-- Your content for the Life page will go here -->
+      <main class="main-content travels-page">
+        <section class="travels-hero">
+          <div class="travels-hero-content">
+            <h1>Rizal's Global Journeys</h1>
+            <p>Explore the cities and countries that shaped the Filipino national hero</p>
+          </div>
+        </section>
+
+        <section class="journey-stats">
+          <div class="stat-card">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Countries Visited</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1882-1892</span>
+            <span class="stat-label">Primary Travel Period</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">22</span>
+            <span class="stat-label">Languages Learned</span>
+          </div>
+        </section>
+
+        <section class="travel-map-section">
+          <h2 class="section-title">Mapping Rizal's Journey</h2>
+          <div class="map-container">
+            <img src="images/europe-map.jpg" alt="Map of Europe with Rizal's travel routes" class="travel-map">
+            <div class="map-point" style="top: 45%; left: 48%;" data-location="paris">
+              <div class="location-dot"></div>
+              <div class="location-tooltip">Paris, France</div>
+            </div>
+            <div class="map-point" style="top: 40%; left: 55%;" data-location="berlin">
+              <div class="location-dot"></div>
+              <div class="location-tooltip">Berlin, Germany</div>
+            </div>
+            <div class="map-point" style="top: 52%; left: 47%;" data-location="brussels">
+              <div class="location-dot"></div>
+              <div class="location-tooltip">Brussels, Belgium</div>
+            </div>
+            <div class="map-point" style="top: 60%; left: 42%;" data-location="madrid">
+              <div class="location-dot"></div>
+              <div class="location-tooltip">Madrid, Spain</div>
+            </div>
+            <div class="map-point" style="top: 37%; left: 33%;" data-location="london">
+              <div class="location-dot"></div>
+              <div class="location-tooltip">London, England</div>
+            </div>
+          </div>
+          <p class="map-instruction">Click on a location to learn more about Rizal's time there</p>
+        </section>
+
+        <section class="destinations-section">
+          <h2 class="section-title">Key Destinations</h2>
+          
+          <div class="destination-cards">
+            <div class="destination-card" id="spain">
+              <div class="destination-image">
+                <img src="images/madrid.jpg" alt="Madrid, Spain">
+              </div>
+              <div class="destination-content">
+                <h3>Spain (1882-1885)</h3>
+                <p class="destination-date">First Visit: May 3, 1882</p>
+                <p>
+                  Rizal's journey to Spain marked his first trip to Europe, where he pursued his medical studies at the Universidad Central de Madrid. He also immersed himself in Spanish culture and society while developing his political ideas through involvement with Filipino expatriates seeking reforms.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Completed his medical education</li>
+                  <li>Became active in the Propaganda Movement</li>
+                  <li>Improved his skills in painting, sculpture, and fencing</li>
+                  <li>Delivered speeches about the situation in the Philippines</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="destination-card" id="france">
+              <div class="destination-image">
+                <img src="images/paris.jpg" alt="Paris, France">
+              </div>
+              <div class="destination-content">
+                <h3>France (1885-1886)</h3>
+                <p class="destination-date">First Visit: June 1885</p>
+                <p>
+                  In Paris, Rizal worked as an assistant to Dr. Louis de Wecker, a renowned ophthalmologist. The city's intellectual atmosphere greatly influenced him, and he frequented libraries and museums while connecting with scientists and artists of the time.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Advanced his studies in ophthalmology</li>
+                  <li>Attended scientific lectures at the University of Paris</li>
+                  <li>Began working on his first novel "Noli Me Tángere"</li>
+                  <li>Met and collaborated with European scientists</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="destination-card" id="germany">
+              <div class="destination-image">
+                <img src="images/berlin.jpg" alt="Berlin, Germany">
+              </div>
+              <div class="destination-content">
+                <h3>Germany (1886-1887)</h3>
+                <p class="destination-date">First Visit: February 1, 1886</p>
+                <p>
+                  Rizal's time in Germany was highly productive. He continued his medical studies under prominent doctors, learned the German language, and completed his first novel. He was also influenced by German thinking and efficiency during his stay.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Published "Noli Me Tángere" in Berlin</li>
+                  <li>Studied ophthalmology under Dr. Otto Becker</li>
+                  <li>Became a member of the Ethnological and Anthropological Society</li>
+                  <li>Learned the German language in just six months</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="destination-card" id="london">
+              <div class="destination-image">
+                <img src="images/london.jpg" alt="London, England">
+              </div>
+              <div class="destination-content">
+                <h3>England (1888)</h3>
+                <p class="destination-date">Visit: May 1888</p>
+                <p>
+                  In London, Rizal spent his time researching at the British Museum, where he annotated Antonio de Morga's historical work "Sucesos de las Islas Filipinas." This research was crucial for his goal of highlighting the rich pre-colonial Filipino history.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Annotated Morga's "Sucesos de las Islas Filipinas"</li>
+                  <li>Met Dr. Reinhold Rost, a prominent Orientalist</li>
+                  <li>Improved his English language skills</li>
+                  <li>Researched Filipino pre-colonial history</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="destination-card" id="belgium">
+              <div class="destination-image">
+                <img src="images/brussels.jpg" alt="Brussels, Belgium">
+              </div>
+              <div class="destination-content">
+                <h3>Belgium (1890)</h3>
+                <p class="destination-date">Visit: January 28, 1890</p>
+                <p>
+                  Brussels served as Rizal's home while he worked on his second novel, "El Filibusterismo." He chose Belgium for its lower cost of living while still providing the European intellectual environment that nurtured his writing.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Wrote most of "El Filibusterismo"</li>
+                  <li>Published articles in La Solidaridad</li>
+                  <li>Continued his involvement with the Propaganda Movement</li>
+                  <li>Maintained correspondence with fellow reformists</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="destination-card" id="hong-kong">
+              <div class="destination-image">
+                <img src="images/hong-kong.jpg" alt="Hong Kong">
+              </div>
+              <div class="destination-content">
+                <h3>Hong Kong (1891-1892)</h3>
+                <p class="destination-date">First Visit: November 20, 1891</p>
+                <p>
+                  After his European sojourn, Rizal settled in Hong Kong where he established a medical practice and planned his return to the Philippines. He reunited with his family who had fled persecution in their homeland.
+                </p>
+                <h4>Key Accomplishments:</h4>
+                <ul>
+                  <li>Established a successful medical practice</li>
+                  <li>Published "El Filibusterismo"</li>
+                  <li>Planned the establishment of a Filipino colony in Borneo</li>
+                  <li>Prepared for his return to the Philippines</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="travel-impact">
+          <h2 class="section-title">Impact of Rizal's Travels</h2>
+          <div class="impact-content">
+            <div class="impact-text">
+              <p>Rizal's extensive travels across Europe and Asia profoundly shaped his worldview and provided him with a global perspective that was rare for Filipinos of his time. His exposure to liberal ideas, scientific advancements, and various cultures directly influenced his writings and reform advocacy.</p>
+              
+              <p>Through his journeys, Rizal was able to:</p>
+              
+              <ul>
+                <li>Gain first-hand experience of democratic societies and compare them with colonial Philippines</li>
+                <li>Connect with fellow reformists and intellectuals who supported Philippine reform</li>
+                <li>Access libraries and museums that provided him with knowledge unavailable in his homeland</li>
+                <li>Develop advanced skills in medicine, languages, arts, and sciences</li>
+                <li>Document Filipino culture and history from a perspective outside Spanish colonial influence</li>
+              </ul>
+              
+              <p>These experiences armed Rizal with the knowledge and perspective needed to articulate the aspirations of his countrymen and challenge the Spanish colonial narrative. His travels were not merely for personal enrichment but became a crucial element in his mission to seek justice and recognition for the Filipino people.</p>
+            </div>
+            <div class="impact-quote">
+              <blockquote>
+                "Like others, I also desire the happiness of my country... I would wish that Filipinos were more critical, more steadfast, more thoughtful, more industrious, and more independent."
+                <cite>— Jose Rizal, from a letter written abroad</cite>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="travel-gallery">
+          <h2 class="section-title">Gallery: Rizal Abroad</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/rizal-paris.jpg" alt="Rizal in Paris">
+              <p class="caption">Rizal with friends in Paris, 1885</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/rizal-madrid.jpg" alt="Rizal in Madrid">
+              <p class="caption">Studying in Madrid, 1883</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/rizal-berlin.jpg" alt="Rizal in Berlin">
+              <p class="caption">Research work in Berlin, 1887</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/rizal-letter.jpg" alt="Letter written by Rizal abroad">
+              <p class="caption">Letter to his family from Europe, 1886</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/rizal-hongkong.jpg" alt="Rizal's clinic in Hong Kong">
+              <p class="caption">Rizal's medical clinic in Hong Kong, 1891</p>
+            </div>
+            <div class="gallery-item">
+              <img src="images/rizal-travel-document.jpg" alt="Rizal's travel document">
+              <p class="caption">Travel document used during European journeys</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="travel-cta-section">
+          <h2>Discover the Complete Story</h2>
+          <p>Learn more about how Rizal's global experiences shaped his vision for the Philippines</p>
+          <a href="life.html" class="cta-button">Explore Rizal's Life</a>
+        </section>
       </main>
 
       <!-- Footer Section -->
@@ -58,6 +296,7 @@
     </div>
     
     <script src="js/script.js"></script>
+    <script src="js/travels.js"></script>
   
   </body>
 </html>
