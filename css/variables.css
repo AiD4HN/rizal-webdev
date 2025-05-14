@@ -1,0 +1,10 @@
+:root {
+  /* Color Palette */
+  --color-parchment-light: #f5f1e6;  
+  --color-parchment-medium: #e8e0cc; 
+  --color-parchment-dark: #c8b495;   
+  --color-ink-primary: #48290f;      
+  --color-ink-secondary: #8b4513;    
+  --color-ink-tertiary: #3c2a15;     
+  --color-shadow: rgba(72, 41, 15, 0.15); 
+}

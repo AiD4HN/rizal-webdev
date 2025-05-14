@@ -1,13 +1,4 @@
-:root {
-  /* Color Palette */
-  --color-parchment-light: #f5f1e6;  
-  --color-parchment-medium: #e8e0cc; 
-  --color-parchment-dark: #c8b495;   
-  --color-ink-primary: #48290f;      
-  --color-ink-secondary: #8b4513;    
-  --color-ink-tertiary: #3c2a15;     
-  --color-shadow: rgba(72, 41, 15, 0.15); 
-}
+@import url('variables.css');
 
 * {
   margin: 0;
@@ -33,8 +24,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
-  opacity: 0.03;
+  background-image: url('../images/background.jpg');
+  opacity: 0.04;
   pointer-events: none;
   z-index: -1;
 }
