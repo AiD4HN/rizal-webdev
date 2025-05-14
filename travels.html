@@ -35,15 +35,16 @@
         </div>
       </header>
       
-      <!-- Main Content Section -->
-      <main class="main-content travels-page">
-        <section class="travels-hero">
-          <div class="travels-hero-content">
-            <h1>Rizal's Global Journeys</h1>
-            <p>Explore the cities and countries that shaped the Filipino national hero</p>
+        <section class="head">
+          <div class="head-content">
+            <h2>Rizal's Global Journeys</h2>
+            <p>Explore the cities and countries that shaped the Filipino national hero
+            </p>
           </div>
         </section>
 
+      <!-- Main Content Section -->
+      <main class="main-content travels-page">
         <section class="journey-stats">
           <div class="stat-card">
             <span class="stat-number">10+</span>
@@ -62,27 +63,12 @@
         <section class="travel-map-section">
           <h2 class="section-title">Mapping Rizal's Journey</h2>
           <div class="map-container">
-            <img src="images/europe-map.jpg" alt="Map of Europe with Rizal's travel routes" class="travel-map">
-            <div class="map-point" style="top: 45%; left: 48%;" data-location="paris">
-              <div class="location-dot"></div>
-              <div class="location-tooltip">Paris, France</div>
-            </div>
-            <div class="map-point" style="top: 40%; left: 55%;" data-location="berlin">
-              <div class="location-dot"></div>
-              <div class="location-tooltip">Berlin, Germany</div>
-            </div>
-            <div class="map-point" style="top: 52%; left: 47%;" data-location="brussels">
-              <div class="location-dot"></div>
-              <div class="location-tooltip">Brussels, Belgium</div>
-            </div>
-            <div class="map-point" style="top: 60%; left: 42%;" data-location="madrid">
-              <div class="location-dot"></div>
-              <div class="location-tooltip">Madrid, Spain</div>
-            </div>
-            <div class="map-point" style="top: 37%; left: 33%;" data-location="london">
-              <div class="location-dot"></div>
-              <div class="location-tooltip">London, England</div>
-            </div>
+            <img src="images/europe-map.png" alt="Map of Europe" class="europe-map">
+            <div class="map-point" data-location="madrid"></div>
+            <div class="map-point" data-location="paris"></div>
+            <div class="map-point" data-location="berlin"></div>
+            <div class="map-point" data-location="london"></div>
+            <div class="map-point" data-location="brussels"></div>
           </div>
           <p class="map-instruction">Click on a location to learn more about Rizal's time there</p>
         </section>
@@ -93,13 +79,13 @@
           <div class="destination-cards">
             <div class="destination-card" id="spain">
               <div class="destination-image">
-                <img src="images/madrid.jpg" alt="Madrid, Spain">
+                <img src="images/Madrid.png" alt="Madrid, Spain">
               </div>
               <div class="destination-content">
                 <h3>Spain (1882-1885)</h3>
                 <p class="destination-date">First Visit: May 3, 1882</p>
                 <p>
-                  Rizal's journey to Spain marked his first trip to Europe, where he pursued his medical studies at the Universidad Central de Madrid. He also immersed himself in Spanish culture and society while developing his political ideas through involvement with Filipino expatriates seeking reforms.
+                  Rizal’s secret departure to Spain marked the beginning of his mission to study and observe European life, culture, laws, and government. Traveling under the name Jose Mercado, he left the Philippines on May 3, 1882, aboard the steamer Salvadora, determined to gain knowledge that would help in the struggle for Filipino freedom from Spanish rule.
                 </p>
                 <h4>Key Accomplishments:</h4>
                 <ul>
@@ -113,13 +99,13 @@
             
             <div class="destination-card" id="france">
               <div class="destination-image">
-                <img src="images/paris.jpg" alt="Paris, France">
+                <img src="images/Paris.png" alt="Paris, France">
               </div>
               <div class="destination-content">
-                <h3>France (1885-1886)</h3>
-                <p class="destination-date">First Visit: June 1885</p>
+                <h3>Paris, France (1885–1886)</h3>
+                <p class="destination-date">First Visit: Late 1885</p>
                 <p>
-                  In Paris, Rizal worked as an assistant to Dr. Louis de Wecker, a renowned ophthalmologist. The city's intellectual atmosphere greatly influenced him, and he frequented libraries and museums while connecting with scientists and artists of the time.
+                  After finishing his studies in Spain, Rizal went to Paris to further his medical specialization in ophthalmology, aiming to cure his mother’s eye condition. His time in Paris was both professionally productive and socially enriching.
                 </p>
                 <h4>Key Accomplishments:</h4>
                 <ul>
@@ -133,7 +119,7 @@
             
             <div class="destination-card" id="germany">
               <div class="destination-image">
-                <img src="images/berlin.jpg" alt="Berlin, Germany">
+                <img src="images/Berlin.jpg" alt="Berlin, Germany">
               </div>
               <div class="destination-content">
                 <h3>Germany (1886-1887)</h3>
@@ -153,7 +139,7 @@
             
             <div class="destination-card" id="london">
               <div class="destination-image">
-                <img src="images/london.jpg" alt="London, England">
+                <img src="images/England.jpg" alt="London, England">
               </div>
               <div class="destination-content">
                 <h3>England (1888)</h3>
@@ -173,7 +159,7 @@
             
             <div class="destination-card" id="belgium">
               <div class="destination-image">
-                <img src="images/brussels.jpg" alt="Brussels, Belgium">
+                <img src="images/Belgium.jpg" alt="Brussels, Belgium">
               </div>
               <div class="destination-content">
                 <h3>Belgium (1890)</h3>
@@ -193,7 +179,7 @@
             
             <div class="destination-card" id="hong-kong">
               <div class="destination-image">
-                <img src="images/hong-kong.jpg" alt="Hong Kong">
+                <img src="images/Hong_Kong.jpg" alt="Hong Kong">
               </div>
               <div class="destination-content">
                 <h3>Hong Kong (1891-1892)</h3>
@@ -240,37 +226,8 @@
           </div>
         </section>
 
-        <section class="travel-gallery">
-          <h2 class="section-title">Gallery: Rizal Abroad</h2>
-          <div class="gallery-grid">
-            <div class="gallery-item">
-              <img src="images/rizal-paris.jpg" alt="Rizal in Paris">
-              <p class="caption">Rizal with friends in Paris, 1885</p>
-            </div>
-            <div class="gallery-item">
-              <img src="images/rizal-madrid.jpg" alt="Rizal in Madrid">
-              <p class="caption">Studying in Madrid, 1883</p>
-            </div>
-            <div class="gallery-item">
-              <img src="images/rizal-berlin.jpg" alt="Rizal in Berlin">
-              <p class="caption">Research work in Berlin, 1887</p>
-            </div>
-            <div class="gallery-item">
-              <img src="images/rizal-letter.jpg" alt="Letter written by Rizal abroad">
-              <p class="caption">Letter to his family from Europe, 1886</p>
-            </div>
-            <div class="gallery-item">
-              <img src="images/rizal-hongkong.jpg" alt="Rizal's clinic in Hong Kong">
-              <p class="caption">Rizal's medical clinic in Hong Kong, 1891</p>
-            </div>
-            <div class="gallery-item">
-              <img src="images/rizal-travel-document.jpg" alt="Rizal's travel document">
-              <p class="caption">Travel document used during European journeys</p>
-            </div>
-          </div>
-        </section>
 
-        <section class="travel-cta-section">
+      <section class="travel-cta-section">
           <h2>Discover the Complete Story</h2>
           <p>Learn more about how Rizal's global experiences shaped his vision for the Philippines</p>
           <a href="life.html" class="cta-button">Explore Rizal's Life</a>

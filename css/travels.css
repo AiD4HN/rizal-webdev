@@ -6,29 +6,28 @@
   margin: 0 auto;
 }
 
-/* Hero section */
-.travels-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/world-map-vintage.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px 20px;
+.head {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-content {
+  position: relative;
   text-align: center;
-  margin-bottom: 40px;
-  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 800px;
+  animation: heroFadeIn 1s ease-out;
 }
 
-.travels-hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.travels-hero-content p {
-  font-size: 1.3rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+.head-content h2 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-ink-primary);
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 /* Journey Stats */
@@ -41,20 +40,20 @@
 }
 
 .stat-card {
-  background: #f8f8f8;
+  background: var(--color-parchment-light);
   border-radius: 10px;
   padding: 25px;
   min-width: 200px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid #0a3161;
+  border-bottom: 4px solid var(--color-ink-secondary);
 }
 
 .stat-number {
   display: block;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #c8102e;
+  color: var(--color-accent-primary);
   margin-bottom: 10px;
 }
 
@@ -79,7 +78,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background-color: #0a3161;
+  background-color: var(--color-ink-secondary);
 }
 
 /* Travel Map Section */
@@ -91,8 +90,9 @@
 
 .map-container {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .travel-map {
@@ -101,16 +101,84 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.europe-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .map-point {
   position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-ink-secondary);
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.map-point:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Position each point according to its geographical location */
+.map-point[data-location="madrid"] {
+  top: 83%;
+  left: 20%;
+}
+
+.map-point[data-location="paris"] {
+  top: 74%;
+  left: 36%;
+}
+
+.map-point[data-location="berlin"] {
+  top: 60%;
+  left: 52%;
+}
+
+.map-point[data-location="london"] {
+  top: 55.5%;
+  left: 30%;
+}
+
+.map-point[data-location="brussels"] {
+  top: 61.5%;
+  left: 40%;
+}
+
+/* Add tooltip for better UX */
+.map-point::after {
+  content: attr(data-location);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-parchment-dark);
+  color: var(--color-ink-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+}
+
+.map-point:hover::after {
+  opacity: 1;
 }
 
 .location-dot {
   width: 16px;
   height: 16px;
-  background-color: #c8102e;
+  background-color: var(--color-accent-primary);
   border-radius: 50%;
   border: 3px solid white;
   box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.3);
@@ -194,7 +262,7 @@
 .destination-content h3 {
   margin-top: 0;
   margin-bottom: 5px;
-  color: #0a3161;
+  color: var(--color-ink-secondary);
   font-size: 1.6rem;
 }
 
@@ -210,7 +278,7 @@
 }
 
 .destination-content h4 {
-  color: #c8102e;
+  color: var(--color-accent-primary);
   margin: 20px 0 10px;
 }
 
@@ -274,7 +342,7 @@
   position: absolute;
   top: -30px;
   left: -20px;
-  color: #0a3161;
+  color: var(--color-ink-secondary);
   opacity: 0.2;
 }
 
@@ -330,8 +398,7 @@
 .travel-cta-section {
   text-align: center;
   padding: 60px 20px;
-  background-color: #0a3161;
-  color: white;
+  color: var(--color-ink-primary);
   border-radius: 8px;
   margin-bottom: 60px;
 }
@@ -339,6 +406,7 @@
 .travel-cta-section h2 {
   margin-bottom: 20px;
   font-size: 2rem;
+  color: var(--color-ink-primary);
 }
 
 .travel-cta-section p {
@@ -347,12 +415,13 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--color-ink-tertiary);
 }
 
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #c8102e;
+  background-color: var(--color-ink-primary);
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -362,7 +431,7 @@
 }
 
 .cta-button:hover {
-  background-color: #a00d25;
+  background-color: var(--color-ink-secondary);
 }
 
 /* Responsive design */
