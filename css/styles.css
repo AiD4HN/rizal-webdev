@@ -121,7 +121,7 @@ body::before {
 .hero {
   position: relative;
   width: 100%;
-  height: 1200px;
+  height: 820px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -221,12 +221,15 @@ body::before {
   align-items: center;
   gap: 50px;
   transition: transform 0.3s ease;
+  flex-direction: row;
 }
 
 .content-column {
   padding: 1.5rem;
   align-items: center;
   margin: 10rem;
+  margin: 5rem 0;
+  width: 100%;
 }
 
 .content-image {
@@ -412,48 +415,82 @@ body::before {
   }
 }
 
+.content-column {
+    margin: 3rem 0;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 300px;
   }
+
+  .content-row {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    gap: 25px; /* Reduce gap on mobile */
+  }
+  
+  .content-image {
+    max-width: 100%; /* Ensure images are responsive */
+  }
+  
+  .content-column {
+    margin: 2rem 0; /* Further reduce margin on mobile */
+    padding: 1rem;
+  }
+  
+  .content-wrapper {
+    max-width: 100%; /* Ensure content wrapper takes full width */
+  }
+
   .hero-content {
     padding: 1.5rem;
   }
+
   .hero-content h2 {
     font-size: 1.8rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
   .content-grid {
     grid-template-columns: 1fr;
-    padding: 5rem 2rem; 
+    padding: 5rem 2rem;
   }
+
   .section-title {
     font-size: 1.875rem;
   }
+
   .team-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
   }
+
   .member-image {
     width: 120px;
     height: 120px;
   }
+
   .mission-text {
     font-size: 1rem;
     padding: 1rem;
   }
+
   .container {
-    padding: 0; 
+    padding: 0;
   }
+
   .footer {
     padding: 2rem 1.25rem;
   }
+
   .footer-content {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   .footer-nav {
     flex-direction: column;
     align-items: flex-start;
@@ -465,6 +502,11 @@ body::before {
   .header {
     padding: 1rem 1.5rem;
   }
+
+  .content-row {
+    gap: 15px; /* Even smaller gap on very small screens */
+  }
+
   .desktop-nav {
     display: none;
     flex-direction: column;
@@ -477,22 +519,28 @@ body::before {
     box-shadow: 0 4px 6px var(--color-shadow);
     z-index: 100;
   }
+
   .desktop-nav.active {
     display: flex;
   }
+
   .mobile-menu-button {
     display: block;
   }
+
   .main-content {
     padding: 2rem 1.25rem;
   }
+
   .content-column {
-    margin: 3rem 0; 
+    margin: 3rem 0;
   }
+
   .grid-image {
     width: 100%;
     height: auto;
   }
+
   .header-title {
     font-size: 1.8rem;
   }
@@ -502,8 +550,10 @@ body::before {
   .team-grid {
     grid-template-columns: 1fr;
   }
+
   .content-grid {
-    gap: 3rem; 
+    gap: 3rem;
     padding: 3rem 1rem;
   }
 }
+
